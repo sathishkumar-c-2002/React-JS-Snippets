@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.app-container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+.app-container h1{
+    font-weight: 400;
+    font-size: 18px;
+    color: cornflowerblue;
+    border-bottom: 1px solid #ccc;
+    padding:10px ;
+}
+.image{
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+.input-label{
+    display: block ;
+    margin-bottom: 10px;
+    color: cornflowerblue;
+    font-weight: 500;   
+}
+
+input[type='text']{
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+}
+
+button{
+    padding: 15px;
+    gap: 10;
+    font-size: 18px;
+    cursor: pointer;
+    color: aliceblue;
+    transition: background-color 0.3s;
+}
+.generateBtn{
+    background-color: cornflowerblue;
+    border: 0px;   
+}
+.generateBtn:disabled{
+    background-color: aliceblue;
+    cursor: not-allowed;
+}
+.generateBtn:hover{
+    background-color:dodgerblue;
+    border: 1px cornflowerblue;
+}
+.downloadBtn:hover{
+    background-color: greenyellow;
+    border: 1px darkgreen;
+    color: darkgreen;
+}
+
+.downloadBtn{
+    background-color: darkgreen;
+    margin-left: 10px;
+    border: 0px;
+}
+.spiky{
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 18px;
+}
