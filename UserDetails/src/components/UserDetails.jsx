@@ -1,26 +1,24 @@
 import React,{useState} from 'react'
+import { use } from 'react'
 
 export const UserDetails = () => {
-  const [userName,setUserName] = useState("Sathish")
-  const [userAge, setUserAge] = useState(21)
+    const [user,setUser] = useState({names:"Sathih",age:21})
 
   const UpdateUserName = () => (
-    // setUserName("Sathishkumar")
-    userName==="Sathish"?setUserName("Sathishkumar") : setUserName("Sathish")
-
+    setUser({...user,names:"Vijay"})
   )
   
   const UpdateUserAge = () => (
-    // setUserAge(22)
-    userAge===21?setUserAge(22):setUserAge(21)
+    setUser({...user,age:30})
+    
   )
 
     return (
     <>
     
     <h1>UserDetails</h1>
-    <p>{userName}</p>
-    <p>{userAge}</p>
+    <p>{user.names}</p>
+    <p>{user.age}</p>
     <button onClick={UpdateUserName}>Update User Name</button>
     <button onClick={UpdateUserAge}>Update User Age</button>
     
