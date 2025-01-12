@@ -1,33 +1,17 @@
 import React,{useState} from 'react'
 
 export const UserDetails = () => {
-    const [user,setUser] = useState({names:"Name",age:0})
-
-    function changeName(event){
-    //Using multiple varibles
-        // const newStateObject = {...user}
-        // newStateObject.names = event.target.value
-        // setUser( newStateObject)
-
-    //with One Arrow Function    
-        setUser((oldState)=>{
-            return {...oldState,names:event.target.value}
-        })
-
+    const [user,setUser] = useState({FName:"FirstName",LName:"LastName",age:0})
+    function changeHandler(event){
+        setUser({...user,[event.target.name]:event.target.value})
     }
-    function changeAge(event){
-        setUser((oldState)=>{
-            return {...oldState,age:event.target.value}
-        })
-
-    }
-
     return (
     <>
-    <p>{user.names} {user.age}</p>
+    <p>{user.FName} {user.LName} {user.age}</p>
     <form>
-        <input type='text' placeholder='Enter Name' value={user.names} onChange={changeName}/>
-        <input type='text' placeholder='Enter Age' value={user.age} onChange={changeAge}/>
+        <input type='text' placeholder='Enter First Name' name ="FName" value={user.FName} onChange={changeHandler}/>
+        <input type='text' placeholder='Enter Last Name' name ="LName" value={user.LName} onChange={changeHandler}/>
+        <input type='text' placeholder='Enter Age' name ="age" value={user.age} onChange={changeHandler}/>
     </form>
     </>
   )
