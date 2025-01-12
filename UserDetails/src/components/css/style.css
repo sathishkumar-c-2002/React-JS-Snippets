@@ -1,0 +1,113 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Container for the form and table */
+form, table {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form input[type="text"], 
+form input[type="number"], 
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="text"]:focus, 
+form input[type="number"]:focus, 
+form select:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.5);
+}
+
+form div {
+    display: flex;
+    gap: 20px;
+}
+
+form label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form input[type="checkbox"], 
+form input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+form input[type="checkbox"]:focus, 
+form input[type="radio"]:focus {
+    outline: 2px solid #6c63ff;
+}
+
+form select {
+    background-color: #f9f9f9;
+}
+
+form button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #574bdb;
+}
