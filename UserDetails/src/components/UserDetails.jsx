@@ -1,29 +1,34 @@
 import React,{useState} from 'react'
-import { use } from 'react'
 
 export const UserDetails = () => {
-    const [user,setUser] = useState({names:"Sathih",age:21})
+    const [user,setUser] = useState({names:"Name",age:0})
 
-  const UpdateUserName = () => (
-    setUser({...user,names:"Vijay"})
-  )
-  
-  const UpdateUserAge = () => (
-    setUser({...user,age:30})
-    
-  )
+    function changeName(event){
+    //Using multiple varibles
+        // const newStateObject = {...user}
+        // newStateObject.names = event.target.value
+        // setUser( newStateObject)
+
+    //with One Arrow Function    
+        setUser((oldState)=>{
+            return {...oldState,names:event.target.value}
+        })
+
+    }
+    function changeAge(event){
+        setUser((oldState)=>{
+            return {...oldState,age:event.target.value}
+        })
+
+    }
 
     return (
     <>
-    
-    <h1>UserDetails</h1>
-    <p>{user.names}</p>
-    <p>{user.age}</p>
-    <button onClick={UpdateUserName}>Update User Name</button>
-    <button onClick={UpdateUserAge}>Update User Age</button>
-    
-
-
+    <p>{user.names} {user.age}</p>
+    <form>
+        <input type='text' placeholder='Enter Name' value={user.names} onChange={changeName}/>
+        <input type='text' placeholder='Enter Age' value={user.age} onChange={changeAge}/>
+    </form>
     </>
   )
 }
