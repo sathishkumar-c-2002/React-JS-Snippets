@@ -1,0 +1,139 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #212121;
+}
+
+.bmi-calculator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.container {
+  background-color: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #388e3c;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-container label {
+  font-size: 14px;
+  color: #616161;
+}
+
+.input-container input {
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  color: #212121;
+  background-color: #ffffff;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.calculation-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.calculation-btn:hover {
+  background-color: #388e3c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #f9fbe7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result p {
+  margin: 0;
+  font-size: 14px;
+  color: #388e3c;
+}
+
+.result p:nth-child(1) {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+.button-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
