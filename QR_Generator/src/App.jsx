@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './css/QRCode.css'
 import { First } from './components/First'
+import { Cart } from './components/Cart'
 
 
 function App() {
   return (
     <>
     <First />
+    {/* <Cart /> */}
     </>
   )
 }

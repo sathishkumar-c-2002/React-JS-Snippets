@@ -31,7 +31,7 @@ async function generateQR() {
       link.click()
       document.body.removeChild(link)
     })
-  }
+  }c
     return (
     <div className='app-container'>
         <h1>QR Code Generator</h1>
